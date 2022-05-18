@@ -29,7 +29,7 @@ import java.net.URI;
  * URLs to navigate the different pages. As of now we always only return a single page. 
  */
 @ApiModel(description = "URLs to navigate the different pages. As of now we always only return a single page. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T12:47:42.757Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T12:32:59.654Z[Etc/UTC]")
 
 public class PaginationLinks {
   public static final String SERIALIZED_NAME_PREV = "prev";

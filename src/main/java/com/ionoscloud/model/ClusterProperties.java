@@ -20,9 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionoscloud.model.BackupLocation;
 import com.ionoscloud.model.Connection;
-import com.ionoscloud.model.Location;
 import com.ionoscloud.model.MaintenanceWindow;
 import com.ionoscloud.model.StorageType;
 import com.ionoscloud.model.SynchronizationMode;
@@ -36,7 +34,7 @@ import java.util.List;
  * Properties of a database cluster
  */
 @ApiModel(description = "Properties of a database cluster")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T12:47:42.757Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T12:32:59.654Z[Etc/UTC]")
 
 public class ClusterProperties {
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
@@ -49,11 +47,11 @@ public class ClusterProperties {
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
-  private Location location;
+  private String location;
 
   public static final String SERIALIZED_NAME_BACKUP_LOCATION = "backupLocation";
   @SerializedName(SERIALIZED_NAME_BACKUP_LOCATION)
-  private BackupLocation backupLocation;
+  private String backupLocation;
 
   public static final String SERIALIZED_NAME_INSTANCES = "instances";
   @SerializedName(SERIALIZED_NAME_INSTANCES)
@@ -134,48 +132,48 @@ public class ClusterProperties {
   }
 
 
-  public ClusterProperties location(Location location) {
+  public ClusterProperties location(String location) {
     
     this.location = location;
     return this;
   }
 
    /**
-   * Get location
+   * The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. 
    * @return location
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "de/fra", value = "The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. ")
 
-  public Location getLocation() {
+  public String getLocation() {
     return location;
   }
 
 
-  public void setLocation(Location location) {
+  public void setLocation(String location) {
     this.location = location;
   }
 
 
-  public ClusterProperties backupLocation(BackupLocation backupLocation) {
+  public ClusterProperties backupLocation(String backupLocation) {
     
     this.backupLocation = backupLocation;
     return this;
   }
 
    /**
-   * Get backupLocation
+   * The S3 location where the backups will be stored.
    * @return backupLocation
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "de", value = "The S3 location where the backups will be stored.")
 
-  public BackupLocation getBackupLocation() {
+  public String getBackupLocation() {
     return backupLocation;
   }
 
 
-  public void setBackupLocation(BackupLocation backupLocation) {
+  public void setBackupLocation(String backupLocation) {
     this.backupLocation = backupLocation;
   }
 

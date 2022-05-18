@@ -30,7 +30,7 @@ import org.threeten.bp.OffsetDateTime;
  * Metadata of the backup resource.
  */
 @ApiModel(description = "Metadata of the backup resource.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T12:47:42.757Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T12:32:59.654Z[Etc/UTC]")
 
 public class BackupMetadata {
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";

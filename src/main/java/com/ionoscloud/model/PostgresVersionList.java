@@ -31,7 +31,7 @@ import java.util.List;
  * list of PostgreSQL versions
  */
 @ApiModel(description = "list of PostgreSQL versions")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T12:47:42.757Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T12:32:59.654Z[Etc/UTC]")
 
 public class PostgresVersionList {
   public static final String SERIALIZED_NAME_DATA = "data";

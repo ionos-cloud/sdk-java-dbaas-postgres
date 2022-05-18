@@ -23,7 +23,6 @@ import com.google.gson.stream.JsonWriter;
 import com.ionoscloud.model.Connection;
 import com.ionoscloud.model.CreateRestoreRequest;
 import com.ionoscloud.model.DBUser;
-import com.ionoscloud.model.Location;
 import com.ionoscloud.model.MaintenanceWindow;
 import com.ionoscloud.model.StorageType;
 import com.ionoscloud.model.SynchronizationMode;
@@ -37,7 +36,7 @@ import java.util.List;
  * Properties with all data needed to create a new PostgreSQL cluster. 
  */
 @ApiModel(description = "Properties with all data needed to create a new PostgreSQL cluster. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-03-10T12:47:42.757Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-05-18T12:32:59.654Z[Etc/UTC]")
 
 public class CreateClusterProperties {
   public static final String SERIALIZED_NAME_POSTGRES_VERSION = "postgresVersion";
@@ -70,7 +69,11 @@ public class CreateClusterProperties {
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
-  private Location location;
+  private String location;
+
+  public static final String SERIALIZED_NAME_BACKUP_LOCATION = "backupLocation";
+  @SerializedName(SERIALIZED_NAME_BACKUP_LOCATION)
+  private String backupLocation;
 
   public static final String SERIALIZED_NAME_DISPLAY_NAME = "displayName";
   @SerializedName(SERIALIZED_NAME_DISPLAY_NAME)
@@ -258,25 +261,48 @@ public class CreateClusterProperties {
   }
 
 
-  public CreateClusterProperties location(Location location) {
+  public CreateClusterProperties location(String location) {
     
     this.location = location;
     return this;
   }
 
    /**
-   * Get location
+   * The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. 
    * @return location
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "de/fra", required = true, value = "The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation. ")
 
-  public Location getLocation() {
+  public String getLocation() {
     return location;
   }
 
 
-  public void setLocation(Location location) {
+  public void setLocation(String location) {
     this.location = location;
+  }
+
+
+  public CreateClusterProperties backupLocation(String backupLocation) {
+    
+    this.backupLocation = backupLocation;
+    return this;
+  }
+
+   /**
+   * The S3 location where the backups will be stored.
+   * @return backupLocation
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "de", value = "The S3 location where the backups will be stored.")
+
+  public String getBackupLocation() {
+    return backupLocation;
+  }
+
+
+  public void setBackupLocation(String backupLocation) {
+    this.backupLocation = backupLocation;
   }
 
 
@@ -401,7 +427,7 @@ public class CreateClusterProperties {
       return false;
     }
     CreateClusterProperties createClusterProperties = (CreateClusterProperties) o;
-    return Objects.equals(this.postgresVersion, createClusterProperties.postgresVersion) && Objects.equals(this.instances, createClusterProperties.instances) && Objects.equals(this.cores, createClusterProperties.cores) && Objects.equals(this.ram, createClusterProperties.ram) && Objects.equals(this.storageSize, createClusterProperties.storageSize) && Objects.equals(this.storageType, createClusterProperties.storageType) && Objects.equals(this.connections, createClusterProperties.connections) && Objects.equals(this.location, createClusterProperties.location) && Objects.equals(this.displayName, createClusterProperties.displayName) && Objects.equals(this.maintenanceWindow, createClusterProperties.maintenanceWindow) && Objects.equals(this.credentials, createClusterProperties.credentials) && Objects.equals(this.synchronizationMode, createClusterProperties.synchronizationMode) && Objects.equals(this.fromBackup, createClusterProperties.fromBackup);
+    return Objects.equals(this.postgresVersion, createClusterProperties.postgresVersion) && Objects.equals(this.instances, createClusterProperties.instances) && Objects.equals(this.cores, createClusterProperties.cores) && Objects.equals(this.ram, createClusterProperties.ram) && Objects.equals(this.storageSize, createClusterProperties.storageSize) && Objects.equals(this.storageType, createClusterProperties.storageType) && Objects.equals(this.connections, createClusterProperties.connections) && Objects.equals(this.location, createClusterProperties.location) && Objects.equals(this.backupLocation, createClusterProperties.backupLocation) && Objects.equals(this.displayName, createClusterProperties.displayName) && Objects.equals(this.maintenanceWindow, createClusterProperties.maintenanceWindow) && Objects.equals(this.credentials, createClusterProperties.credentials) && Objects.equals(this.synchronizationMode, createClusterProperties.synchronizationMode) && Objects.equals(this.fromBackup, createClusterProperties.fromBackup);
   }
 
 
@@ -419,6 +445,7 @@ public class CreateClusterProperties {
     sb.append("    storageType: ").append(toIndentedString(storageType)).append("\n");
     sb.append("    connections: ").append(toIndentedString(connections)).append("\n");
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+    sb.append("    backupLocation: ").append(toIndentedString(backupLocation)).append("\n");
     sb.append("    displayName: ").append(toIndentedString(displayName)).append("\n");
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
     sb.append("    credentials: ").append(toIndentedString(credentials)).append("\n");

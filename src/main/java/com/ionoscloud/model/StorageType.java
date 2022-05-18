@@ -25,14 +25,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 
 /**
- * The storage type used in your cluster.
+ * The storage type used in your cluster. (Value \&quot;SSD\&quot; is deprecated. Use the equivalent \&quot;SSD Premium\&quot; instead)
  */
 @JsonAdapter(StorageType.Adapter.class)
 public enum StorageType {
   
   HDD("HDD"),
   
-  SSD("SSD");
+  SSD("SSD"),
+  
+  SSD_STANDARD("SSD Standard"),
+  
+  SSD_PREMIUM("SSD Premium");
 
   private String value;
 

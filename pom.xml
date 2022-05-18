@@ -5,7 +5,7 @@
     <artifactId>ionos-cloud-sdk-dbaas-postgres</artifactId>
     <packaging>jar</packaging>
     <name>ionos-cloud-sdk-dbaas-postgres</name>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <url>https://github.com/ionos-cloud/sdk-java-dbaas-postgres</url>
     <description>With IONOS Cloud Database as a Service, you can quickly setup and manage a PostgreSQL database</description>
     <scm>

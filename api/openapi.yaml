@@ -468,15 +468,8 @@ paths:
         schema:
           type: string
         style: simple
-      - description: The maximal number of log lines to return.
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          $ref: '#/components/schemas/LimitQuery'
-        style: form
-      - description: The start time for the query in RFC3339 format.
+      - description: The start time for the query in RFC3339 format. Must not be more
+          than 30 days ago but before the end parameter. The default is 30 days ago.
         explode: true
         in: query
         name: start
@@ -485,7 +478,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - description: The end time for the query in RFC3339 format.
+      - description: The end time for the query in RFC3339 format. Must not be greater
+          than now. The default is the current timestamp.
         explode: true
         in: query
         name: end
@@ -493,6 +487,31 @@ paths:
         schema:
           format: date-time
           type: string
+        style: form
+      - description: The direction in which to scan through the logs. The logs are
+          returned in order of the direction.
+        explode: true
+        in: query
+        name: direction
+        required: false
+        schema:
+          default: BACKWARD
+          enum:
+          - BACKWARD
+          - FORWARD
+          type: string
+        style: form
+      - description: The maximal number of log lines to return.  If the limit is reached
+          then log lines will be cut at the end (respecting the scan direction).
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          default: 100
+          maximum: 5000
+          minimum: 1
+          type: integer
         style: form
       responses:
         "200":
@@ -720,35 +739,6 @@ components:
       schema:
         type: string
       style: simple
-    LimitQuery:
-      description: The maximal number of log lines to return.
-      explode: true
-      in: query
-      name: limit
-      required: false
-      schema:
-        $ref: '#/components/schemas/LimitQuery'
-      style: form
-    StartQuery:
-      description: The start time for the query in RFC3339 format.
-      explode: true
-      in: query
-      name: start
-      required: false
-      schema:
-        format: date-time
-        type: string
-      style: form
-    EndQuery:
-      description: The end time for the query in RFC3339 format.
-      explode: true
-      in: query
-      name: end
-      required: false
-      schema:
-        format: date-time
-        type: string
-      style: form
   responses:
     ApiError:
       content:
@@ -818,12 +808,6 @@ components:
       maximum: 5
       minimum: 1
       type: integer
-    LimitQuery:
-      description: The maximal number of log lines to return.
-      example: 10
-      maximum: 5000
-      minimum: 1
-      type: integer
     Cores:
       description: The number of CPU cores per instance.
       example: 4
@@ -847,15 +831,15 @@ components:
         The physical location where the cluster will be created. This will be
         where all of your instances live. Property cannot be modified after
         datacenter creation.
-      enum:
+      example: de/fra
+      type: string
+      x-extensible-enum:
       - de/fra
       - de/txl
       - gb/lhr
       - es/vit
       - us/ewr
       - us/las
-      example: de/fra
-      type: string
     DisplayName:
       description: The friendly name of your cluster.
       example: PostgreSQL cluster
@@ -886,6 +870,7 @@ components:
             dayOfTheWeek: Monday
             time: 16:30:59
           cores: 4
+          backupLocation: de
           storageSize: 5000
           storageType: HDD
           location: de/fra
@@ -918,6 +903,7 @@ components:
           dayOfTheWeek: Monday
           time: 16:30:59
         cores: 4
+        backupLocation: de
         storageSize: 5000
         storageType: HDD
         location: de/fra
@@ -967,7 +953,27 @@ components:
           minItems: 1
           type: array
         location:
-          $ref: '#/components/schemas/Location'
+          description: |
+            The physical location where the cluster will be created. This will be
+            where all of your instances live. Property cannot be modified after
+            datacenter creation.
+          example: de/fra
+          type: string
+          x-extensible-enum:
+          - de/fra
+          - de/txl
+          - gb/lhr
+          - es/vit
+          - us/ewr
+          - us/las
+        backupLocation:
+          description: The S3 location where the backups will be stored.
+          example: de
+          type: string
+          x-extensible-enum:
+          - de
+          - eu-south-2
+          - eu-central-2
         displayName:
           description: The friendly name of your cluster.
           example: PostgreSQL cluster
@@ -1284,9 +1290,27 @@ components:
           example: "13"
           type: string
         location:
-          $ref: '#/components/schemas/Location'
+          description: |
+            The physical location where the cluster will be created. This will be
+            where all of your instances live. Property cannot be modified after
+            datacenter creation.
+          example: de/fra
+          type: string
+          x-extensible-enum:
+          - de/fra
+          - de/txl
+          - gb/lhr
+          - es/vit
+          - us/ewr
+          - us/las
         backupLocation:
-          $ref: '#/components/schemas/BackupLocation'
+          description: The S3 location where the backups will be stored.
+          example: de
+          type: string
+          x-extensible-enum:
+          - de
+          - eu-south-2
+          - eu-central-2
         instances:
           description: |
             The total number of instances in the cluster (one master and n-1
@@ -1384,12 +1408,12 @@ components:
       type: object
     BackupLocation:
       description: The S3 location where the backups will be stored.
-      enum:
+      example: de
+      type: string
+      x-extensible-enum:
       - de
       - eu-south-2
       - eu-central-2
-      example: de
-      type: string
     MaintenanceWindow:
       description: |
         A weekly 4 hour-long window, during which maintenance might occur
@@ -1431,10 +1455,13 @@ components:
           type: string
       type: object
     StorageType:
-      description: The storage type used in your cluster.
+      description: The storage type used in your cluster. (Value "SSD" is deprecated.
+        Use the equivalent "SSD Premium" instead)
       enum:
       - HDD
       - SSD
+      - SSD Standard
+      - SSD Premium
       example: HDD
       type: string
     Pagination:
