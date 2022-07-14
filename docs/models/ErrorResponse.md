@@ -6,7 +6,7 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **httpStatus** | **Integer** | HTTP status code of the operation |  [optional] |
+| **httpStatus** | **Integer** | The HTTP status code of the operation. |  [optional] |
 | **messages** | [**List&lt;ErrorMessage&gt;**](ErrorMessage.md) |  |  [optional] |
 
 

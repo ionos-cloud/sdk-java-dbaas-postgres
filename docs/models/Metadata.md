@@ -2,7 +2,7 @@
 
 # Metadata
 
-Metadata of the resource
+Metadata of the resource.
 ## Properties
 
 | Name | Type | Description | Notes |

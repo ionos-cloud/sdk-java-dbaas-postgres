@@ -2,7 +2,7 @@
 
 # ClusterResponse
 
-A database cluster
+A database cluster.
 ## Properties
 
 | Name | Type | Description | Notes |

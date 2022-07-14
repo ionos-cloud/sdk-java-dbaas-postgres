@@ -2,7 +2,7 @@
 
 # PostgresVersionList
 
-list of PostgreSQL versions
+List of PostgreSQL versions.
 ## Properties
 
 | Name | Type | Description | Notes |

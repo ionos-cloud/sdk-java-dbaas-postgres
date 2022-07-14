@@ -2,7 +2,7 @@
 
 # BackupResponse
 
-A database backup
+A database backup.
 ## Properties
 
 | Name | Type | Description | Notes |

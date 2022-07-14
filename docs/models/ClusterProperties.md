@@ -2,7 +2,7 @@
 
 # ClusterProperties
 
-Properties of a database cluster
+Properties of a database cluster.
 ## Properties
 
 | Name | Type | Description | Notes |
