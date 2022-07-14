@@ -30,7 +30,7 @@ import java.io.IOException;
  * Request payload with all data needed to create a new PostgreSQL cluster. 
  */
 @ApiModel(description = "Request payload with all data needed to create a new PostgreSQL cluster. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T10:59:48.389Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:10:25.683Z[Etc/UTC]")
 
 public class CreateClusterRequest {
   

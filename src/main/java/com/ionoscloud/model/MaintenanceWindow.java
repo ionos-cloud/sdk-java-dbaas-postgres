@@ -29,7 +29,7 @@ import java.io.IOException;
  * A weekly 4 hour-long window, during which maintenance might occur. 
  */
 @ApiModel(description = "A weekly 4 hour-long window, during which maintenance might occur. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T10:59:48.389Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:10:25.683Z[Etc/UTC]")
 
 public class MaintenanceWindow {
   
