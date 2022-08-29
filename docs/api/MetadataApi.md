@@ -19,12 +19,12 @@ Retrieves the current version of the responding API.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.MetadataApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.MetadataApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -74,12 +74,12 @@ Retrieves all available versions of the responding API.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.MetadataApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.MetadataApi;
 
 public class Example {
   public static void main(String[] args) {

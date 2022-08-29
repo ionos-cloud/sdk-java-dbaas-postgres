@@ -24,12 +24,12 @@ Retrieves a list of all PostgreSQL versions available for this cluster including
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -83,12 +83,12 @@ Delete a PostgreSQL cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -142,12 +142,12 @@ You can retrieve a PostgreSQL cluster by using its ID. This value can be found i
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -201,12 +201,12 @@ Retrieves a list of PostgreSQL clusters.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -260,12 +260,12 @@ Patch attributes of a PostgreSQL cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -321,12 +321,12 @@ Creates a new PostgreSQL cluster. If the &#x60;fromBackup&#x60; field is populat
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -380,12 +380,12 @@ Retrieves a list of all available PostgreSQL versions.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.ClustersApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.ClustersApi;
 
 public class Example {
   public static void main(String[] args) {

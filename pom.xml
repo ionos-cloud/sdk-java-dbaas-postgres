@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.ionoscloud</groupId>
+    <groupId>com.ionoscloud.dbaaspostgres</groupId>
     <artifactId>ionos-cloud-sdk-dbaas-postgres</artifactId>
     <packaging>jar</packaging>
     <name>ionos-cloud-sdk-dbaas-postgres</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <url>https://github.com/ionos-cloud/sdk-java-dbaas-postgres</url>
     <description>With IONOS Cloud Database as a Service, you can quickly setup and manage a PostgreSQL database</description>
     <scm>

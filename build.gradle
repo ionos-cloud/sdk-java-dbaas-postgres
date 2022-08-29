@@ -8,8 +8,8 @@ apply plugin: 'signing'
 apply plugin: 'nexus-workflow'
 
 
-group = 'com.ionoscloud'
-version = '1.0.1'
+group = 'com.ionoscloud.dbaaspostgres'
+version = '1.0.2'
 
 buildscript {
     repositories {

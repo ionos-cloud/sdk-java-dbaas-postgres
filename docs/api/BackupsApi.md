@@ -20,12 +20,12 @@ Retrieves a list of all backups of the given PostgreSQL cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.BackupsApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.BackupsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -79,12 +79,12 @@ Retrieve a PostgreSQL cluster backup by using its ID. This value can be found wh
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.BackupsApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.BackupsApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -138,12 +138,12 @@ Retrieves a list of all PostgreSQL cluster backups.
 ### Example
 ```java
 // Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.BackupsApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.BackupsApi;
 
 public class Example {
   public static void main(String[] args) {
