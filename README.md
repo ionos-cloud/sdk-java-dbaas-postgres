@@ -17,9 +17,9 @@ their concepts and lend well to making the experience smooth and intuitive.
 
 ```xml
 <dependency>
-  <groupId>com.ionoscloud</groupId>
-  <artifactId>ionos-cloud-dbaas-sdk</artifactId>
-  <version>v1.0.0</version>
+  <groupId>com.ionoscloud.dbaaspostgres</groupId>
+  <artifactId>ionos-cloud-sdk-dbaas-postgres</artifactId>
+  <version>1.0.2</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -29,18 +29,18 @@ their concepts and lend well to making the experience smooth and intuitive.
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-dbaas-sdk:v1.0.0"
+compile "com.ionoscloud.dbaaspostgres:ionos-cloud-sdk-dbaas-postgres:1.0.2"
 ```
 
 ## Usage
 
 ```java
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.MetadataApi;
+import com.ionoscloud.dbaaspostgres.ApiClient;
+import com.ionoscloud.dbaaspostgres.ApiException;
+import com.ionoscloud.dbaaspostgres.Configuration;
+import com.ionoscloud.dbaaspostgres.auth.*;
+import com.ionoscloud.dbaaspostgres.model.*;
+import com.ionoscloud.dbaaspostgres.api.MetadataApi;
 
 import java.util.List;
 
