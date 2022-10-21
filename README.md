@@ -1,7 +1,7 @@
 # SDK-Java-DBaaS-Postgres
 [![[ CD ] DBaaS Postgres / Java](https://github.com/ionos-cloud/sdk-resources/actions/workflows/release-dbaas-postgres-java.yml/badge.svg)](https://github.com/ionos-cloud/sdk-resources/actions/workflows/release-dbaas-postgres-java.yml)
 
-# Node API Client For IONOS Cloud Dbaas Postgres
+# Java API Client For IONOS Cloud Dbaas Postgres
 An enterprise-grade Database is provided as a Service (DBaaS) solution that
 can be managed through a browser-based \"Data Center Designer\" (DCD) tool or
 via an easy to use API.
