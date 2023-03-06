@@ -1,6 +1,6 @@
 /*
- * IONOS DBaaS REST API
- * An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
+ * IONOS DBaaS PostgreSQL REST API
+ * An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional PostgreSQL database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -524,7 +524,7 @@ public class ClustersApi {
     /**
      * Build call for clustersPatch
      * @param clusterId The unique ID of the cluster. (required)
-     * @param patchClusterRequest The modified cluster. (required)
+     * @param patchClusterRequest Part of the cluster which should be modified. (required)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -589,7 +589,7 @@ public class ClustersApi {
      * Patch a cluster
      * Patch attributes of a PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
-     * @param patchClusterRequest The modified cluster. (required)
+     * @param patchClusterRequest Part of the cluster which should be modified. (required)
      * @return ClusterResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -608,7 +608,7 @@ public class ClustersApi {
      * Patch a cluster
      * Patch attributes of a PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
-     * @param patchClusterRequest The modified cluster. (required)
+     * @param patchClusterRequest Part of the cluster which should be modified. (required)
      * @return ApiResponse&lt;ClusterResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -628,7 +628,7 @@ public class ClustersApi {
      * Patch a cluster (asynchronously)
      * Patch attributes of a PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
-     * @param patchClusterRequest The modified cluster. (required)
+     * @param patchClusterRequest Part of the cluster which should be modified. (required)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object

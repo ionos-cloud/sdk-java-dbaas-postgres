@@ -1,6 +1,6 @@
 /*
- * IONOS DBaaS REST API
- * An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
+ * IONOS DBaaS PostgreSQL REST API
+ * An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.  The API allows you to create additional PostgreSQL database clusters or modify existing ones. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive. 
  *
  * The version of the OpenAPI document: 1.0.0
  * 
@@ -34,7 +34,7 @@ import java.util.List;
  * Properties of a database cluster.
  */
 @ApiModel(description = "Properties of a database cluster.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T14:47:06.484Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
 
 public class ClusterProperties {
   
@@ -51,6 +51,11 @@ public class ClusterProperties {
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
+
+  public static final String SERIALIZED_NAME_DNS_NAME = "dnsName";
+  @SerializedName(SERIALIZED_NAME_DNS_NAME)
+  private String dnsName;
 
 
   public static final String SERIALIZED_NAME_BACKUP_LOCATION = "backupLocation";
@@ -167,6 +172,30 @@ public class ClusterProperties {
 
   public void setLocation(String location) {
     this.location = location;
+  }
+
+
+
+  public ClusterProperties dnsName(String dnsName) {
+    
+    this.dnsName = dnsName;
+    return this;
+  }
+
+   /**
+   * The DNS name pointing to your cluster.
+   * @return dnsName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "pg.example.com", value = "The DNS name pointing to your cluster.")
+
+  public String getDnsName() {
+    return dnsName;
+  }
+
+
+  public void setDnsName(String dnsName) {
+    this.dnsName = dnsName;
   }
 
 
@@ -409,7 +438,7 @@ public class ClusterProperties {
       return false;
     }
     ClusterProperties clusterProperties = (ClusterProperties) o;
-    return Objects.equals(this.displayName, clusterProperties.displayName) && Objects.equals(this.postgresVersion, clusterProperties.postgresVersion) && Objects.equals(this.location, clusterProperties.location) && Objects.equals(this.backupLocation, clusterProperties.backupLocation) && Objects.equals(this.instances, clusterProperties.instances) && Objects.equals(this.ram, clusterProperties.ram) && Objects.equals(this.cores, clusterProperties.cores) && Objects.equals(this.storageSize, clusterProperties.storageSize) && Objects.equals(this.storageType, clusterProperties.storageType) && Objects.equals(this.connections, clusterProperties.connections) && Objects.equals(this.maintenanceWindow, clusterProperties.maintenanceWindow) && Objects.equals(this.synchronizationMode, clusterProperties.synchronizationMode);
+    return Objects.equals(this.displayName, clusterProperties.displayName) && Objects.equals(this.postgresVersion, clusterProperties.postgresVersion) && Objects.equals(this.location, clusterProperties.location) && Objects.equals(this.dnsName, clusterProperties.dnsName) && Objects.equals(this.backupLocation, clusterProperties.backupLocation) && Objects.equals(this.instances, clusterProperties.instances) && Objects.equals(this.ram, clusterProperties.ram) && Objects.equals(this.cores, clusterProperties.cores) && Objects.equals(this.storageSize, clusterProperties.storageSize) && Objects.equals(this.storageType, clusterProperties.storageType) && Objects.equals(this.connections, clusterProperties.connections) && Objects.equals(this.maintenanceWindow, clusterProperties.maintenanceWindow) && Objects.equals(this.synchronizationMode, clusterProperties.synchronizationMode);
   }
 
 
@@ -425,6 +454,8 @@ public class ClusterProperties {
     sb.append("    postgresVersion: ").append(toIndentedString(postgresVersion)).append("\n");
 
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
+    sb.append("    dnsName: ").append(toIndentedString(dnsName)).append("\n");
 
     sb.append("    backupLocation: ").append(toIndentedString(backupLocation)).append("\n");
 

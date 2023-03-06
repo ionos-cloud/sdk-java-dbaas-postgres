@@ -56,6 +56,7 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
@@ -115,6 +116,7 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
@@ -174,6 +176,7 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
@@ -233,6 +236,7 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
@@ -279,7 +283,7 @@ public class Example {
 
     ClustersApi apiInstance = new ClustersApi(defaultClient);
     String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
-    PatchClusterRequest patchClusterRequest = new PatchClusterRequest(); // PatchClusterRequest | The modified cluster.
+    PatchClusterRequest patchClusterRequest = new PatchClusterRequest(); // PatchClusterRequest | Part of the cluster which should be modified.
     try {
       ClusterResponse result = apiInstance.clustersPatch(clusterId, patchClusterRequest);
       System.out.println(result);
@@ -293,13 +297,14 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clusterId** | **String**| The unique ID of the cluster. |
-| **patchClusterRequest** |  [**PatchClusterRequest**](PatchClusterRequest.md)| The modified cluster. |
+| **patchClusterRequest** |  [**PatchClusterRequest**](../models/PatchClusterRequest.md)| Part of the cluster which should be modified. |
 
 ### Return type
 
@@ -353,12 +358,13 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **createClusterRequest** |  [**CreateClusterRequest**](CreateClusterRequest.md)| The cluster to be created. |
+| **createClusterRequest** |  [**CreateClusterRequest**](../models/CreateClusterRequest.md)| The cluster to be created. |
 
 ### Return type
 
@@ -411,6 +417,7 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
 This endpoint does not need any parameter.
