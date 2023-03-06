@@ -35,7 +35,7 @@ import java.util.List;
  * List of backups.
  */
 @ApiModel(description = "List of backups.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
 
 public class ClusterBackupList {
   
@@ -56,15 +56,15 @@ public class ClusterBackupList {
 
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
-  private Integer offset;
+  private Integer offset = 0;
 
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
-  private Integer limit;
+  private Integer limit = 100;
 
 
-  public static final String SERIALIZED_NAME_LINKS = "_links";
+  public static final String SERIALIZED_NAME_LINKS = "links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private PaginationLinks links;
 
@@ -150,13 +150,19 @@ public class ClusterBackupList {
 
 
 
+  public ClusterBackupList offset(Integer offset) {
+    
+    this.offset = offset;
+    return this;
+  }
+
    /**
-   * The offset specified in the request (if none was specified, the default offset is 0) (not implemented yet). 
+   * The offset specified in the request (if none was specified, the default offset is 0). 
    * minimum: 0
    * @return offset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "The offset specified in the request (if none was specified, the default offset is 0) (not implemented yet). ")
+  @ApiModelProperty(example = "200", value = "The offset specified in the request (if none was specified, the default offset is 0). ")
 
   public Integer getOffset() {
     return offset;
@@ -169,13 +175,20 @@ public class ClusterBackupList {
 
 
 
+  public ClusterBackupList limit(Integer limit) {
+    
+    this.limit = limit;
+    return this;
+  }
+
    /**
-   * The limit specified in the request (if none was specified, use the endpoint&#39;s default pagination limit) (not implemented yet, always return number of items). 
+   * The limit specified in the request (if none was specified, the default limit is 100). 
    * minimum: 0
+   * maximum: 1000
    * @return limit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "42", value = "The limit specified in the request (if none was specified, use the endpoint's default pagination limit) (not implemented yet, always return number of items). ")
+  @ApiModelProperty(example = "100", value = "The limit specified in the request (if none was specified, the default limit is 100). ")
 
   public Integer getLimit() {
     return limit;

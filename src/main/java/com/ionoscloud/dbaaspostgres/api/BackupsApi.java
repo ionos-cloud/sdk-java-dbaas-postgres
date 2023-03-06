@@ -59,6 +59,8 @@ public class BackupsApi {
     /**
      * Build call for clusterBackupsGet
      * @param clusterId The unique ID of the cluster. (required)
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -69,7 +71,7 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clusterBackupsGetCall(String clusterId, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    public okhttp3.Call clusterBackupsGetCall(String clusterId, Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -81,6 +83,14 @@ public class BackupsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -101,7 +111,7 @@ public class BackupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call clusterBackupsGetValidateBeforeCall(String clusterId, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    private okhttp3.Call clusterBackupsGetValidateBeforeCall(String clusterId, Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
         
         // verify the required parameter 'clusterId' is set
         if (clusterId == null) {
@@ -109,7 +119,7 @@ public class BackupsApi {
         }
         
 
-        okhttp3.Call localVarCall = clusterBackupsGetCall(clusterId, _callback);
+        okhttp3.Call localVarCall = clusterBackupsGetCall(clusterId, limit, offset, _callback);
         return localVarCall;
 
     }
@@ -118,6 +128,8 @@ public class BackupsApi {
      * List backups of cluster
      * Retrieves a list of all backups of the given PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @return ClusterBackupList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -127,8 +139,8 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ClusterBackupList clusterBackupsGet(String clusterId) throws ApiException {
-        ApiResponse<ClusterBackupList> localVarResp = clusterBackupsGetWithHttpInfo(clusterId);
+    public ClusterBackupList clusterBackupsGet(String clusterId, Integer limit, Integer offset) throws ApiException {
+        ApiResponse<ClusterBackupList> localVarResp = clusterBackupsGetWithHttpInfo(clusterId, limit, offset);
         return localVarResp.getData();
     }
 
@@ -136,6 +148,8 @@ public class BackupsApi {
      * List backups of cluster
      * Retrieves a list of all backups of the given PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @return ApiResponse&lt;ClusterBackupList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -145,8 +159,8 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterBackupList> clusterBackupsGetWithHttpInfo(String clusterId) throws ApiException {
-        okhttp3.Call localVarCall = clusterBackupsGetValidateBeforeCall(clusterId, null);
+    public ApiResponse<ClusterBackupList> clusterBackupsGetWithHttpInfo(String clusterId, Integer limit, Integer offset) throws ApiException {
+        okhttp3.Call localVarCall = clusterBackupsGetValidateBeforeCall(clusterId, limit, offset, null);
         Type localVarReturnType = new TypeToken<ClusterBackupList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -155,6 +169,8 @@ public class BackupsApi {
      * List backups of cluster (asynchronously)
      * Retrieves a list of all backups of the given PostgreSQL cluster.
      * @param clusterId The unique ID of the cluster. (required)
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -165,9 +181,9 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clusterBackupsGetAsync(String clusterId, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    public okhttp3.Call clusterBackupsGetAsync(String clusterId, Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = clusterBackupsGetValidateBeforeCall(clusterId, _callback);
+        okhttp3.Call localVarCall = clusterBackupsGetValidateBeforeCall(clusterId, limit, offset, _callback);
         Type localVarReturnType = new TypeToken<ClusterBackupList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -290,6 +306,8 @@ public class BackupsApi {
     }
     /**
      * Build call for clustersBackupsGet
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -300,7 +318,7 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clustersBackupsGetCall(final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    public okhttp3.Call clustersBackupsGetCall(Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -311,6 +329,14 @@ public class BackupsApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
 
         final String[] localVarAccepts = {
             "application/json"
@@ -331,10 +357,10 @@ public class BackupsApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call clustersBackupsGetValidateBeforeCall(final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    private okhttp3.Call clustersBackupsGetValidateBeforeCall(Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = clustersBackupsGetCall(_callback);
+        okhttp3.Call localVarCall = clustersBackupsGetCall(limit, offset, _callback);
         return localVarCall;
 
     }
@@ -342,6 +368,8 @@ public class BackupsApi {
     /**
      * List cluster backups
      * Retrieves a list of all PostgreSQL cluster backups.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @return ClusterBackupList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -351,14 +379,16 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ClusterBackupList clustersBackupsGet() throws ApiException {
-        ApiResponse<ClusterBackupList> localVarResp = clustersBackupsGetWithHttpInfo();
+    public ClusterBackupList clustersBackupsGet(Integer limit, Integer offset) throws ApiException {
+        ApiResponse<ClusterBackupList> localVarResp = clustersBackupsGetWithHttpInfo(limit, offset);
         return localVarResp.getData();
     }
 
     /**
      * List cluster backups
      * Retrieves a list of all PostgreSQL cluster backups.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @return ApiResponse&lt;ClusterBackupList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -368,8 +398,8 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterBackupList> clustersBackupsGetWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = clustersBackupsGetValidateBeforeCall(null);
+    public ApiResponse<ClusterBackupList> clustersBackupsGetWithHttpInfo(Integer limit, Integer offset) throws ApiException {
+        okhttp3.Call localVarCall = clustersBackupsGetValidateBeforeCall(limit, offset, null);
         Type localVarReturnType = new TypeToken<ClusterBackupList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -377,6 +407,8 @@ public class BackupsApi {
     /**
      * List cluster backups (asynchronously)
      * Retrieves a list of all PostgreSQL cluster backups.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -387,9 +419,9 @@ public class BackupsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clustersBackupsGetAsync(final ApiCallback<ClusterBackupList> _callback) throws ApiException {
+    public okhttp3.Call clustersBackupsGetAsync(Integer limit, Integer offset, final ApiCallback<ClusterBackupList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = clustersBackupsGetValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = clustersBackupsGetValidateBeforeCall(limit, offset, _callback);
         Type localVarReturnType = new TypeToken<ClusterBackupList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

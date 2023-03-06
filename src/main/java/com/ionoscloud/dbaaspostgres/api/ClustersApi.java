@@ -409,6 +409,8 @@ public class ClustersApi {
     }
     /**
      * Build call for clustersGet
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param filterName Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -420,7 +422,7 @@ public class ClustersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clustersGetCall(String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
+    public okhttp3.Call clustersGetCall(Integer limit, Integer offset, String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -431,6 +433,14 @@ public class ClustersApi {
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
 
         if (filterName != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("filter.name", filterName));
@@ -455,10 +465,10 @@ public class ClustersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call clustersGetValidateBeforeCall(String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
+    private okhttp3.Call clustersGetValidateBeforeCall(Integer limit, Integer offset, String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = clustersGetCall(filterName, _callback);
+        okhttp3.Call localVarCall = clustersGetCall(limit, offset, filterName, _callback);
         return localVarCall;
 
     }
@@ -466,6 +476,8 @@ public class ClustersApi {
     /**
      * List clusters
      * Retrieves a list of PostgreSQL clusters.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param filterName Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  (optional)
      * @return ClusterList
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -476,14 +488,16 @@ public class ClustersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ClusterList clustersGet(String filterName) throws ApiException {
-        ApiResponse<ClusterList> localVarResp = clustersGetWithHttpInfo(filterName);
+    public ClusterList clustersGet(Integer limit, Integer offset, String filterName) throws ApiException {
+        ApiResponse<ClusterList> localVarResp = clustersGetWithHttpInfo(limit, offset, filterName);
         return localVarResp.getData();
     }
 
     /**
      * List clusters
      * Retrieves a list of PostgreSQL clusters.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param filterName Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  (optional)
      * @return ApiResponse&lt;ClusterList&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -494,8 +508,8 @@ public class ClustersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public ApiResponse<ClusterList> clustersGetWithHttpInfo(String filterName) throws ApiException {
-        okhttp3.Call localVarCall = clustersGetValidateBeforeCall(filterName, null);
+    public ApiResponse<ClusterList> clustersGetWithHttpInfo(Integer limit, Integer offset, String filterName) throws ApiException {
+        okhttp3.Call localVarCall = clustersGetValidateBeforeCall(limit, offset, filterName, null);
         Type localVarReturnType = new TypeToken<ClusterList>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -503,6 +517,8 @@ public class ClustersApi {
     /**
      * List clusters (asynchronously)
      * Retrieves a list of PostgreSQL clusters.
+     * @param limit The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. (optional, default to 100)
+     * @param offset The first element to return. Use together with &#39;limit&#39; for pagination. (optional, default to 0)
      * @param filterName Response filter to list only the PostgreSQL clusters that contain the specified name. The value is case insensitive and matched on the &#39;displayName&#39; field.  (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -514,9 +530,9 @@ public class ClustersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)  </td><td>  * Content-Type - application/problem+json <br>  </td></tr>
      </table>
      */
-    public okhttp3.Call clustersGetAsync(String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
+    public okhttp3.Call clustersGetAsync(Integer limit, Integer offset, String filterName, final ApiCallback<ClusterList> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = clustersGetValidateBeforeCall(filterName, _callback);
+        okhttp3.Call localVarCall = clustersGetValidateBeforeCall(limit, offset, filterName, _callback);
         Type localVarReturnType = new TypeToken<ClusterList>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

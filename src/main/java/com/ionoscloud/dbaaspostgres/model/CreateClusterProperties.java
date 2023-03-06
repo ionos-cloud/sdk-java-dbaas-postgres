@@ -36,7 +36,7 @@ import java.util.List;
  * Properties with all data needed to create a new PostgreSQL cluster. 
  */
 @ApiModel(description = "Properties with all data needed to create a new PostgreSQL cluster. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
 
 public class CreateClusterProperties {
   

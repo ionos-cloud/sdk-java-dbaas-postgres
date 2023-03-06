@@ -36,6 +36,8 @@ public enum State {
   
   DESTROYING("DESTROYING"),
   
+  DEGRADED("DEGRADED"),
+  
   FAILED("FAILED"),
   
   UNKNOWN("UNKNOWN");

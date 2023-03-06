@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * PostgresVersionListData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
 
 public class PostgresVersionListData {
   

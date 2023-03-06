@@ -2,7 +2,7 @@
 
 # PaginationLinks
 
-URLs to navigate the different pages. As of now we always only return a single page. 
+URLs to navigate the different pages. 
 ## Properties
 
 | Name | Type | Description | Notes |

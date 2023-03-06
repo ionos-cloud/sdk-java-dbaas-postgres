@@ -31,7 +31,7 @@ import java.util.List;
  * List of PostgreSQL versions.
  */
 @ApiModel(description = "List of PostgreSQL versions.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
 
 public class PostgresVersionList {
   

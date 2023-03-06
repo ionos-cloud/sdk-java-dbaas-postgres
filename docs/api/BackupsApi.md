@@ -11,7 +11,7 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
 
 <a name="clusterBackupsGet"></a>
 # **clusterBackupsGet**
-> ClusterBackupList clusterBackupsGet(clusterId)
+> ClusterBackupList clusterBackupsGet(clusterId, limit, offset)
 
 List backups of cluster
 
@@ -39,8 +39,10 @@ public class Example {
 
     BackupsApi apiInstance = new BackupsApi(defaultClient);
     String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    Integer limit = 100; // Integer | The maximum number of elements to return. Use together with 'offset' for pagination.
+    Integer offset = 0; // Integer | The first element to return. Use together with 'limit' for pagination.
     try {
-      ClusterBackupList result = apiInstance.clusterBackupsGet(clusterId);
+      ClusterBackupList result = apiInstance.clusterBackupsGet(clusterId, limit, offset);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupsApi#clusterBackupsGet");
@@ -59,6 +61,8 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **clusterId** | **String**| The unique ID of the cluster. |
+| **limit** | **Integer**| The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional] [default to 100]
+| **offset** | **Integer**| The first element to return. Use together with &#39;limit&#39; for pagination. | [optional] [default to 0]
 
 ### Return type
 
@@ -131,7 +135,7 @@ public class Example {
 
 <a name="clustersBackupsGet"></a>
 # **clustersBackupsGet**
-> ClusterBackupList clustersBackupsGet()
+> ClusterBackupList clustersBackupsGet(limit, offset)
 
 List cluster backups
 
@@ -158,8 +162,10 @@ public class Example {
 
 
     BackupsApi apiInstance = new BackupsApi(defaultClient);
+    Integer limit = 100; // Integer | The maximum number of elements to return. Use together with 'offset' for pagination.
+    Integer offset = 0; // Integer | The first element to return. Use together with 'limit' for pagination.
     try {
-      ClusterBackupList result = apiInstance.clustersBackupsGet();
+      ClusterBackupList result = apiInstance.clustersBackupsGet(limit, offset);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupsApi#clustersBackupsGet");
@@ -174,7 +180,11 @@ public class Example {
 ⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
 ### Parameters
-This endpoint does not need any parameter.
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **limit** | **Integer**| The maximum number of elements to return. Use together with &#39;offset&#39; for pagination. | [optional] [default to 100]
+| **offset** | **Integer**| The first element to return. Use together with &#39;limit&#39; for pagination. | [optional] [default to 0]
 
 ### Return type
 

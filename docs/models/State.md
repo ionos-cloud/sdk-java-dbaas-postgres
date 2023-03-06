@@ -11,6 +11,8 @@
 
 * `DESTROYING` (value: `"DESTROYING"`)
 
+* `DEGRADED` (value: `"DEGRADED"`)
+
 * `FAILED` (value: `"FAILED"`)
 
 * `UNKNOWN` (value: `"UNKNOWN"`)

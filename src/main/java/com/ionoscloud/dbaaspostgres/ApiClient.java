@@ -136,7 +136,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ionos-cloud-sdk-java-dbaas-postgres/v1.1.0");
+        setUserAgent("ionos-cloud-sdk-java-dbaas-postgres/v1.1.1");
 
         authentications = new HashMap<String, Authentication>();
     }

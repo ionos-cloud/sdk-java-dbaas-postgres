@@ -26,10 +26,10 @@ import java.io.IOException;
 import java.net.URI;
 
 /**
- * URLs to navigate the different pages. As of now we always only return a single page. 
+ * URLs to navigate the different pages. 
  */
-@ApiModel(description = "URLs to navigate the different pages. As of now we always only return a single page. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T14:30:34.321Z[Etc/UTC]")
+@ApiModel(description = "URLs to navigate the different pages. ")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
 
 public class PaginationLinks {
   
