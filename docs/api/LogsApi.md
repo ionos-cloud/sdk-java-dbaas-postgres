@@ -36,7 +36,7 @@ public class Example {
 
 
     LogsApi apiInstance = new LogsApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     OffsetDateTime start = OffsetDateTime.now(); // OffsetDateTime | The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago.
     OffsetDateTime end = OffsetDateTime.now(); // OffsetDateTime | The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp.
     String direction = "BACKWARD"; // String | The direction in which to scan through the logs. The logs are returned in order of the direction.

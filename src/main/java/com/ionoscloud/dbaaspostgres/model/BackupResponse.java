@@ -31,7 +31,7 @@ import java.io.IOException;
  * A database backup.
  */
 @ApiModel(description = "A database backup.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class BackupResponse {
   
@@ -67,7 +67,7 @@ public class BackupResponse {
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "backup", value = "")
+  @ApiModelProperty(value = "")
 
   public ResourceType getType() {
     return type;

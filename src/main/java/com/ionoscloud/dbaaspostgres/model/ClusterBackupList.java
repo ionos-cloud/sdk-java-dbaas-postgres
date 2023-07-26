@@ -21,8 +21,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ionoscloud.dbaaspostgres.model.BackupResponse;
-import com.ionoscloud.dbaaspostgres.model.ClusterBackupListAllOf;
-import com.ionoscloud.dbaaspostgres.model.Pagination;
 import com.ionoscloud.dbaaspostgres.model.PaginationLinks;
 import com.ionoscloud.dbaaspostgres.model.ResourceType;
 import io.swagger.annotations.ApiModel;
@@ -35,7 +33,7 @@ import java.util.List;
  * List of backups.
  */
 @ApiModel(description = "List of backups.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterBackupList {
   
@@ -126,7 +124,7 @@ public class ClusterBackupList {
 
   public ClusterBackupList addItemsItem(BackupResponse itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<BackupResponse>();
+      this.items = new ArrayList<>();
     }
     this.items.add(itemsItem);
     return this;

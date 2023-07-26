@@ -11,4 +11,8 @@
 
 * `BACKUP` (value: `"backup"`)
 
+* `USER` (value: `"user"`)
+
+* `DATABASE` (value: `"database"`)
+
 

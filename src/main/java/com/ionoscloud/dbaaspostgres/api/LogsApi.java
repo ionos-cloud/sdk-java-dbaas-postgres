@@ -29,7 +29,7 @@ import java.io.IOException;
 
 import com.ionoscloud.dbaaspostgres.model.ClusterLogs;
 import com.ionoscloud.dbaaspostgres.model.ErrorResponse;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;

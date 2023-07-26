@@ -2,17 +2,16 @@
 
 # Metadata
 
-Metadata of the resource.
 ## Properties
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The ISO 8601 creation timestamp. |  [optional] |
-| **createdBy** | **String** |  |  [optional] |
-| **createdByUserId** | **String** |  |  [optional] |
-| **lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The ISO 8601 modified timestamp. |  [optional] |
-| **lastModifiedBy** | **String** |  |  [optional] |
-| **lastModifiedByUserId** | **String** |  |  [optional] |
-| **state** | [**State**](State.md) |  |  [optional] |
+| **createdBy** | **String** | The URN of an IAM user. |  [optional] |
+| **createdByUserId** | [**UUID**](UUID.md) | The ID of an IAM user. |  [optional] |
+| **createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | An ISO 8601 timestamp. |  [optional] |
+| **lastModifiedBy** | **String** | The URN of an IAM user. |  [optional] |
+| **lastModifiedByUserId** | [**UUID**](UUID.md) | The ID of an IAM user. |  [optional] |
+| **lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | An ISO 8601 timestamp. |  [optional] |
+| **resourceURN** | **String** | The URN of the resource. |  [optional] |
 
 

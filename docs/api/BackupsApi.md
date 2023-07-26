@@ -38,7 +38,7 @@ public class Example {
 
 
     BackupsApi apiInstance = new BackupsApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     Integer limit = 100; // Integer | The maximum number of elements to return. Use together with 'offset' for pagination.
     Integer offset = 0; // Integer | The first element to return. Use together with 'limit' for pagination.
     try {
@@ -102,7 +102,7 @@ public class Example {
 
 
     BackupsApi apiInstance = new BackupsApi(defaultClient);
-    String backupId = "backupId_example"; // String | The unique ID of the backup.
+    String backupId = "498ae72f-411f-11eb-9d07-046c59cc737e-4oymiqu-12"; // String | The unique ID of the backup.
     try {
       BackupResponse result = apiInstance.clustersBackupsFindById(backupId);
       System.out.println(result);

@@ -26,9 +26,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Pagination
+ * Pagination information in list responses.
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@ApiModel(description = "Pagination information in list responses.")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class Pagination {
   
@@ -42,7 +43,7 @@ public class Pagination {
   private Integer limit = 100;
 
 
-  public static final String SERIALIZED_NAME_LINKS = "links";
+  public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private PaginationLinks links;
 

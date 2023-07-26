@@ -20,9 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionoscloud.dbaaspostgres.model.ClusterListAllOf;
 import com.ionoscloud.dbaaspostgres.model.ClusterResponse;
-import com.ionoscloud.dbaaspostgres.model.Pagination;
 import com.ionoscloud.dbaaspostgres.model.PaginationLinks;
 import com.ionoscloud.dbaaspostgres.model.ResourceType;
 import io.swagger.annotations.ApiModel;
@@ -35,7 +33,7 @@ import java.util.List;
  * List of clusters.
  */
 @ApiModel(description = "List of clusters.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterList {
   
@@ -126,7 +124,7 @@ public class ClusterList {
 
   public ClusterList addItemsItem(ClusterResponse itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<ClusterResponse>();
+      this.items = new ArrayList<>();
     }
     this.items.add(itemsItem);
     return this;

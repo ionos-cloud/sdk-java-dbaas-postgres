@@ -20,73 +20,43 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionoscloud.dbaaspostgres.model.UserProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
 
 /**
- * ClusterLogsMessages
+ * User
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
-public class ClusterLogsMessages {
+public class User {
   
-  public static final String SERIALIZED_NAME_TIME = "time";
-  @SerializedName(SERIALIZED_NAME_TIME)
-  private OffsetDateTime time;
-
-
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
-  private String message;
+  public static final String SERIALIZED_NAME_PROPERTIES = "properties";
+  @SerializedName(SERIALIZED_NAME_PROPERTIES)
+  private UserProperties properties;
 
   
 
-  public ClusterLogsMessages time(OffsetDateTime time) {
+  public User properties(UserProperties properties) {
     
-    this.time = time;
+    this.properties = properties;
     return this;
   }
 
    /**
-   * Get time
-   * @return time
+   * Get properties
+   * @return properties
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2021-09-06T10:00:38.253+02:00", value = "")
+  @ApiModelProperty(required = true, value = "")
 
-  public OffsetDateTime getTime() {
-    return time;
+  public UserProperties getProperties() {
+    return properties;
   }
 
 
-  public void setTime(OffsetDateTime time) {
-    this.time = time;
-  }
-
-
-
-  public ClusterLogsMessages message(String message) {
-    
-    this.message = message;
-    return this;
-  }
-
-   /**
-   * Get message
-   * @return message
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "Hello World", value = "")
-
-  public String getMessage() {
-    return message;
-  }
-
-
-  public void setMessage(String message) {
-    this.message = message;
+  public void setProperties(UserProperties properties) {
+    this.properties = properties;
   }
 
 
@@ -98,8 +68,8 @@ public class ClusterLogsMessages {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ClusterLogsMessages clusterLogsMessages = (ClusterLogsMessages) o;
-    return Objects.equals(this.time, clusterLogsMessages.time) && Objects.equals(this.message, clusterLogsMessages.message);
+    User user = (User) o;
+    return Objects.equals(this.properties, user.properties);
   }
 
 
@@ -108,11 +78,9 @@ public class ClusterLogsMessages {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ClusterLogsMessages {\n");
+    sb.append("class User {\n");
     
-    sb.append("    time: ").append(toIndentedString(time)).append("\n");
-
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();
   }

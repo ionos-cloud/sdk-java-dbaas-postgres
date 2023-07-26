@@ -7,7 +7,7 @@ Request payload to change a cluster.
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **metadata** | [**Metadata**](Metadata.md) |  |  [optional] |
+| **metadata** | [**ClusterMetadata**](ClusterMetadata.md) |  |  [optional] |
 | **properties** | [**PatchClusterProperties**](PatchClusterProperties.md) |  |  [optional] |
 
 

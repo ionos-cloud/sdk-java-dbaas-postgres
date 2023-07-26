@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionoscloud.dbaaspostgres.model.Metadata;
+import com.ionoscloud.dbaaspostgres.model.ClusterMetadata;
 import com.ionoscloud.dbaaspostgres.model.PatchClusterProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -30,13 +30,13 @@ import java.io.IOException;
  * Request payload to change a cluster.
  */
 @ApiModel(description = "Request payload to change a cluster.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class PatchClusterRequest {
   
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
-  private Metadata metadata;
+  private ClusterMetadata metadata;
 
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
@@ -45,7 +45,7 @@ public class PatchClusterRequest {
 
   
 
-  public PatchClusterRequest metadata(Metadata metadata) {
+  public PatchClusterRequest metadata(ClusterMetadata metadata) {
     
     this.metadata = metadata;
     return this;
@@ -58,12 +58,12 @@ public class PatchClusterRequest {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public Metadata getMetadata() {
+  public ClusterMetadata getMetadata() {
     return metadata;
   }
 
 
-  public void setMetadata(Metadata metadata) {
+  public void setMetadata(ClusterMetadata metadata) {
     this.metadata = metadata;
   }
 

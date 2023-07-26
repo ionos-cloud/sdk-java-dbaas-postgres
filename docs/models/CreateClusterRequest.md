@@ -7,7 +7,7 @@ Request payload with all data needed to create a new PostgreSQL cluster.
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **metadata** | [**Metadata**](Metadata.md) |  |  [optional] |
+| **metadata** | [**ClusterMetadata**](ClusterMetadata.md) |  |  [optional] |
 | **properties** | [**CreateClusterProperties**](CreateClusterProperties.md) |  |  [optional] |
 
 

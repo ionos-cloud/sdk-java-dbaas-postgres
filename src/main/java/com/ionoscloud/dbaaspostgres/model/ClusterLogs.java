@@ -31,7 +31,7 @@ import java.util.List;
  * The logs of the PostgreSQL cluster.
  */
 @ApiModel(description = "The logs of the PostgreSQL cluster.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterLogs {
   
@@ -49,7 +49,7 @@ public class ClusterLogs {
 
   public ClusterLogs addInstancesItem(ClusterLogsInstances instancesItem) {
     if (this.instances == null) {
-      this.instances = new ArrayList<ClusterLogsInstances>();
+      this.instances = new ArrayList<>();
     }
     this.instances.add(instancesItem);
     return this;

@@ -20,25 +20,19 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionoscloud.dbaaspostgres.model.State;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
+import java.util.UUID;
 
 /**
- * Metadata of the resource.
+ * Metadata
  */
-@ApiModel(description = "Metadata of the resource.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class Metadata {
   
-  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
-  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
-  private OffsetDateTime createdDate;
-
-
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
@@ -46,12 +40,12 @@ public class Metadata {
 
   public static final String SERIALIZED_NAME_CREATED_BY_USER_ID = "createdByUserId";
   @SerializedName(SERIALIZED_NAME_CREATED_BY_USER_ID)
-  private String createdByUserId;
+  private UUID createdByUserId;
 
 
-  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
-  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
-  private OffsetDateTime lastModifiedDate;
+  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
+  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
+  private OffsetDateTime createdDate;
 
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY = "lastModifiedBy";
@@ -61,38 +55,19 @@ public class Metadata {
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID = "lastModifiedByUserId";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID)
-  private String lastModifiedByUserId;
+  private UUID lastModifiedByUserId;
 
 
-  public static final String SERIALIZED_NAME_STATE = "state";
-  @SerializedName(SERIALIZED_NAME_STATE)
-  private State state;
+  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
+  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
+  private OffsetDateTime lastModifiedDate;
+
+
+  public static final String SERIALIZED_NAME_RESOURCE_U_R_N = "resourceURN";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_U_R_N)
+  private String resourceURN;
 
   
-
-  public Metadata createdDate(OffsetDateTime createdDate) {
-    
-    this.createdDate = createdDate;
-    return this;
-  }
-
-   /**
-   * The ISO 8601 creation timestamp.
-   * @return createdDate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-10T13:37:50+01:00", value = "The ISO 8601 creation timestamp.")
-
-  public OffsetDateTime getCreatedDate() {
-    return createdDate;
-  }
-
-
-  public void setCreatedDate(OffsetDateTime createdDate) {
-    this.createdDate = createdDate;
-  }
-
-
 
   public Metadata createdBy(String createdBy) {
     
@@ -101,11 +76,11 @@ public class Metadata {
   }
 
    /**
-   * Get createdBy
+   * The URN of an IAM user.
    * @return createdBy
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "john.doe@example.com", value = "")
+  @ApiModelProperty(example = "ionos:iam:cloud::users/f719718d-e0aa-4870-a36c-cc0bdb8c6d90", value = "The URN of an IAM user.")
 
   public String getCreatedBy() {
     return createdBy;
@@ -118,50 +93,50 @@ public class Metadata {
 
 
 
-  public Metadata createdByUserId(String createdByUserId) {
+  public Metadata createdByUserId(UUID createdByUserId) {
     
     this.createdByUserId = createdByUserId;
     return this;
   }
 
    /**
-   * Get createdByUserId
+   * The ID of an IAM user.
    * @return createdByUserId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "87f9a82e-b28d-49ed-9d04-fba2c0459cd3", value = "")
+  @ApiModelProperty(example = "f719718d-e0aa-4870-a36c-cc0bdb8c6d90", value = "The ID of an IAM user.")
 
-  public String getCreatedByUserId() {
+  public UUID getCreatedByUserId() {
     return createdByUserId;
   }
 
 
-  public void setCreatedByUserId(String createdByUserId) {
+  public void setCreatedByUserId(UUID createdByUserId) {
     this.createdByUserId = createdByUserId;
   }
 
 
 
-  public Metadata lastModifiedDate(OffsetDateTime lastModifiedDate) {
+  public Metadata createdDate(OffsetDateTime createdDate) {
     
-    this.lastModifiedDate = lastModifiedDate;
+    this.createdDate = createdDate;
     return this;
   }
 
    /**
-   * The ISO 8601 modified timestamp.
-   * @return lastModifiedDate
+   * An ISO 8601 timestamp.
+   * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2020-12-11T13:37:50+01:00", value = "The ISO 8601 modified timestamp.")
+  @ApiModelProperty(example = "2023-05-11T13:37:50Z", value = "An ISO 8601 timestamp.")
 
-  public OffsetDateTime getLastModifiedDate() {
-    return lastModifiedDate;
+  public OffsetDateTime getCreatedDate() {
+    return createdDate;
   }
 
 
-  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
-    this.lastModifiedDate = lastModifiedDate;
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
   }
 
 
@@ -173,11 +148,11 @@ public class Metadata {
   }
 
    /**
-   * Get lastModifiedBy
+   * The URN of an IAM user.
    * @return lastModifiedBy
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "jane.doe@example.com", value = "")
+  @ApiModelProperty(example = "ionos:iam:cloud::users/f719718d-e0aa-4870-a36c-cc0bdb8c6d90", value = "The URN of an IAM user.")
 
   public String getLastModifiedBy() {
     return lastModifiedBy;
@@ -190,50 +165,74 @@ public class Metadata {
 
 
 
-  public Metadata lastModifiedByUserId(String lastModifiedByUserId) {
+  public Metadata lastModifiedByUserId(UUID lastModifiedByUserId) {
     
     this.lastModifiedByUserId = lastModifiedByUserId;
     return this;
   }
 
    /**
-   * Get lastModifiedByUserId
+   * The ID of an IAM user.
    * @return lastModifiedByUserId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "87f9a82e-b28d-49ed-9d04-fba2c0459cd3", value = "")
+  @ApiModelProperty(example = "f719718d-e0aa-4870-a36c-cc0bdb8c6d90", value = "The ID of an IAM user.")
 
-  public String getLastModifiedByUserId() {
+  public UUID getLastModifiedByUserId() {
     return lastModifiedByUserId;
   }
 
 
-  public void setLastModifiedByUserId(String lastModifiedByUserId) {
+  public void setLastModifiedByUserId(UUID lastModifiedByUserId) {
     this.lastModifiedByUserId = lastModifiedByUserId;
   }
 
 
 
-  public Metadata state(State state) {
+  public Metadata lastModifiedDate(OffsetDateTime lastModifiedDate) {
     
-    this.state = state;
+    this.lastModifiedDate = lastModifiedDate;
     return this;
   }
 
    /**
-   * Get state
-   * @return state
+   * An ISO 8601 timestamp.
+   * @return lastModifiedDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "2023-05-11T13:37:50Z", value = "An ISO 8601 timestamp.")
 
-  public State getState() {
-    return state;
+  public OffsetDateTime getLastModifiedDate() {
+    return lastModifiedDate;
   }
 
 
-  public void setState(State state) {
-    this.state = state;
+  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
+    this.lastModifiedDate = lastModifiedDate;
+  }
+
+
+
+  public Metadata resourceURN(String resourceURN) {
+    
+    this.resourceURN = resourceURN;
+    return this;
+  }
+
+   /**
+   * The URN of the resource.
+   * @return resourceURN
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "ionos:postgresql:de-fra:11274857:clusters/c668480f-8627-4b6c-b422-2599d4b568a6/users/benjamin", value = "The URN of the resource.")
+
+  public String getResourceURN() {
+    return resourceURN;
+  }
+
+
+  public void setResourceURN(String resourceURN) {
+    this.resourceURN = resourceURN;
   }
 
 
@@ -246,7 +245,7 @@ public class Metadata {
       return false;
     }
     Metadata metadata = (Metadata) o;
-    return Objects.equals(this.createdDate, metadata.createdDate) && Objects.equals(this.createdBy, metadata.createdBy) && Objects.equals(this.createdByUserId, metadata.createdByUserId) && Objects.equals(this.lastModifiedDate, metadata.lastModifiedDate) && Objects.equals(this.lastModifiedBy, metadata.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, metadata.lastModifiedByUserId) && Objects.equals(this.state, metadata.state);
+    return Objects.equals(this.createdBy, metadata.createdBy) && Objects.equals(this.createdByUserId, metadata.createdByUserId) && Objects.equals(this.createdDate, metadata.createdDate) && Objects.equals(this.lastModifiedBy, metadata.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, metadata.lastModifiedByUserId) && Objects.equals(this.lastModifiedDate, metadata.lastModifiedDate) && Objects.equals(this.resourceURN, metadata.resourceURN);
   }
 
 
@@ -257,19 +256,19 @@ public class Metadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class Metadata {\n");
     
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
 
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
 
-    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
 
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
 
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
 
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+
+    sb.append("    resourceURN: ").append(toIndentedString(resourceURN)).append("\n");
     sb.append("}");
     return sb.toString();
   }

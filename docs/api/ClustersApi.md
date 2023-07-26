@@ -42,7 +42,7 @@ public class Example {
 
 
     ClustersApi apiInstance = new ClustersApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     try {
       PostgresVersionList result = apiInstance.clusterPostgresVersionsGet(clusterId);
       System.out.println(result);
@@ -102,7 +102,7 @@ public class Example {
 
 
     ClustersApi apiInstance = new ClustersApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     try {
       ClusterResponse result = apiInstance.clustersDelete(clusterId);
       System.out.println(result);
@@ -162,7 +162,7 @@ public class Example {
 
 
     ClustersApi apiInstance = new ClustersApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     try {
       ClusterResponse result = apiInstance.clustersFindById(clusterId);
       System.out.println(result);
@@ -286,7 +286,7 @@ public class Example {
 
 
     ClustersApi apiInstance = new ClustersApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     PatchClusterRequest patchClusterRequest = new PatchClusterRequest(); // PatchClusterRequest | Part of the cluster which should be modified.
     try {
       ClusterResponse result = apiInstance.clustersPatch(clusterId, patchClusterRequest);

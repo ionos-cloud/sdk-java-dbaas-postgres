@@ -29,7 +29,7 @@ import java.io.IOException;
  * A weekly 4 hour-long window, during which maintenance might occur. 
  */
 @ApiModel(description = "A weekly 4 hour-long window, during which maintenance might occur. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class MaintenanceWindow {
   
@@ -54,7 +54,7 @@ public class MaintenanceWindow {
    * Start of the maintenance window in UTC time.
    * @return time
   **/
-  @ApiModelProperty(example = "16:30:59", required = true, value = "Start of the maintenance window in UTC time.")
+  @ApiModelProperty(example = "59459", required = true, value = "Start of the maintenance window in UTC time.")
 
   public String getTime() {
     return time;

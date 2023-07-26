@@ -20,7 +20,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionoscloud.dbaaspostgres.model.ClusterLogsMessages;
+import com.ionoscloud.dbaaspostgres.model.ClusterLogsInstancesMessages;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * ClusterLogsInstances
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterLogsInstances {
   
@@ -41,7 +41,7 @@ public class ClusterLogsInstances {
 
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
-  private List<ClusterLogsMessages> messages = null;
+  private List<ClusterLogsInstancesMessages> messages = null;
 
   
 
@@ -69,15 +69,15 @@ public class ClusterLogsInstances {
 
 
 
-  public ClusterLogsInstances messages(List<ClusterLogsMessages> messages) {
+  public ClusterLogsInstances messages(List<ClusterLogsInstancesMessages> messages) {
     
     this.messages = messages;
     return this;
   }
 
-  public ClusterLogsInstances addMessagesItem(ClusterLogsMessages messagesItem) {
+  public ClusterLogsInstances addMessagesItem(ClusterLogsInstancesMessages messagesItem) {
     if (this.messages == null) {
-      this.messages = new ArrayList<ClusterLogsMessages>();
+      this.messages = new ArrayList<>();
     }
     this.messages.add(messagesItem);
     return this;
@@ -90,12 +90,12 @@ public class ClusterLogsInstances {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<ClusterLogsMessages> getMessages() {
+  public List<ClusterLogsInstancesMessages> getMessages() {
     return messages;
   }
 
 
-  public void setMessages(List<ClusterLogsMessages> messages) {
+  public void setMessages(List<ClusterLogsInstancesMessages> messages) {
     this.messages = messages;
   }
 

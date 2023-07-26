@@ -36,7 +36,7 @@ public class Example {
 
 
     RestoresApi apiInstance = new RestoresApi(defaultClient);
-    String clusterId = "clusterId_example"; // String | The unique ID of the cluster.
+    String clusterId = "498ae72f-411f-11eb-9d07-046c59cc737e"; // String | The unique ID of the cluster.
     CreateRestoreRequest createRestoreRequest = new CreateRestoreRequest(); // CreateRestoreRequest | The restore request to create.
     try {
       apiInstance.clusterRestorePost(clusterId, createRestoreRequest);

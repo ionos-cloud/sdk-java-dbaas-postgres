@@ -34,7 +34,7 @@ import java.util.List;
  * Properties of a database cluster.
  */
 @ApiModel(description = "Properties of a database cluster.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterProperties {
   
@@ -358,7 +358,7 @@ public class ClusterProperties {
 
   public ClusterProperties addConnectionsItem(Connection connectionsItem) {
     if (this.connections == null) {
-      this.connections = new ArrayList<Connection>();
+      this.connections = new ArrayList<>();
     }
     this.connections.add(connectionsItem);
     return this;

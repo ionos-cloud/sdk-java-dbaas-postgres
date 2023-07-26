@@ -2,6 +2,7 @@
 
 # Pagination
 
+Pagination information in list responses.
 ## Properties
 
 | Name | Type | Description | Notes |

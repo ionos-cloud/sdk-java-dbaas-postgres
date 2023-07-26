@@ -1,6 +1,6 @@
 
 
-# ClusterLogsMessages
+# ClusterLogsInstancesMessages
 
 ## Properties
 

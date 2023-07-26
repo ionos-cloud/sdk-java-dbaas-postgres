@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * ClusterListAllOf
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class ClusterListAllOf {
   
@@ -107,7 +107,7 @@ public class ClusterListAllOf {
 
   public ClusterListAllOf addItemsItem(ClusterResponse itemsItem) {
     if (this.items == null) {
-      this.items = new ArrayList<ClusterResponse>();
+      this.items = new ArrayList<>();
     }
     this.items.add(itemsItem);
     return this;

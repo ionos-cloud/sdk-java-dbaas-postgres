@@ -36,7 +36,7 @@ import java.util.List;
  * Properties with all data needed to create a new PostgreSQL cluster. 
  */
 @ApiModel(description = "Properties with all data needed to create a new PostgreSQL cluster. ")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-03-06T18:14:39.019Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-07-26T08:52:33.432818Z[Etc/UTC]")
 
 public class CreateClusterProperties {
   
@@ -72,7 +72,7 @@ public class CreateClusterProperties {
 
   public static final String SERIALIZED_NAME_CONNECTIONS = "connections";
   @SerializedName(SERIALIZED_NAME_CONNECTIONS)
-  private List<Connection> connections = new ArrayList<Connection>();
+  private List<Connection> connections = new ArrayList<>();
 
 
   public static final String SERIALIZED_NAME_LOCATION = "location";

@@ -34,7 +34,11 @@ public enum ResourceType {
   
   CLUSTER("cluster"),
   
-  BACKUP("backup");
+  BACKUP("backup"),
+  
+  USER("user"),
+  
+  DATABASE("database");
 
   private String value;
 
