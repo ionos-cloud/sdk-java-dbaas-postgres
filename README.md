@@ -68,7 +68,7 @@ public class test {
 }
 ```
 
-## FAQ
+## FAQ 
 
  - How can I open a bug/feature request?
 	Bugs & feature requests can be open on the repository issues: https://github.com/ionos-cloud/sdk-java-dbaas-postgres/issues/new/choose
